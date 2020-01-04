@@ -1,0 +1,219 @@
+/* Fond d'écran sur toute la page */
+body
+{
+    background-image:url(Livree.jpg);
+    background-size:cover;
+    margin:0;
+    width:100%;
+    height:100%;
+    background-repeat:no-repeat;
+}
+
+nav
+{
+    background-color: black;
+    width: 150px;
+    font-size:1.5em;
+    margin: 0 auto;
+    text-align: center;
+    align-content: center;   
+}
+
+input
+{
+    /* Pour s'assurer que tous les champs texte ont la même police.*/
+    font: 1em sans-serif;
+    /* Pour que tous les champs texte aient la même dimension */
+    width: 150px;
+    box-sizing: border-box;
+    /* Pour harmoniser le look & feel des bordures des champs texte */
+    border: 1px solid #999;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* Logo à droite */
+#BackgroundHead
+{
+        position: fixed;
+        z-index: -1; /* pour que ce sois en "arriere plan" */
+        top: 0; /* on place la division en haut a droite */
+        right: 0;
+}
+
+/* Pour AfficherLivreAdmin.php; AfficherPersonnesAdmin.php */
+#PositionH1
+{
+    width: 800px;
+    margin: 0 auto;
+    background-color: greenyellow;
+    text-align: center;
+    align-content: center;
+    color:blue;
+    font-size:1.5em;
+}
+
+/*Pour la table de AfficherLivreAdmin.php; AfficherPersonnesAdmin.php */
+#TableAdmin
+{
+    font-size: 1.5em;
+    width:600px;
+    margin: 0 auto;
+    background-color:white;
+    padding: 10px;
+    border:medium solid;
+    border-collapse: collapse;
+}
+#TableUtilisateur
+{
+    font-size: 1.5em;
+    width:600px;
+    margin: 0 auto;
+    background-color:white;
+    padding: 10px;
+    border:medium solid;
+    border-collapse: collapse;   
+}
+#TableAdminEmprunt
+{
+    font-size:1.5em;
+    width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 10px;
+    border: medium solid;
+    border-collapse: collapse;
+}
+th
+{
+    font-size : 1.3em;
+    color :red;
+    border: thin solid;
+}
+td
+{
+    font-size : 1em;
+    border: thin solid
+}
+
+/* Bouton pour la page AfficherLivreAdmin.php */
+#ButtonAjouter
+{
+    margin: 0 auto;
+    text-align: center;
+    align-content: center;
+}
+
+/* Menu deroulant */
+#Menu_Deroulant, #Menu_Deroulant ul
+{
+    padding:0;
+    margin:0;
+    list-style:none;
+    text-align:center;
+}
+/* On les aligne par li et ul */
+    #Menu_Deroulant li
+    {
+        display:inline-block;
+        position:relative;
+        border-radius:8px 8px 0 0;
+    }
+    #Menu_Deroulant ul li
+    {
+        display:inherit;
+        border-radius:0;
+    }
+    /*Peux etre inutile */
+    #Menu_Deroulant ul li:hover{
+    border-radius:0;
+    }
+    /*AUSSI */
+    #Menu_Deroulant ul li:last-child{
+    border-radius:0 0 8px 8px;
+    }
+    /* Menu deroulant */
+    #Menu_Deroulant ul
+    {
+        position:absolute;
+        z-index: 1000;
+        max-height:0;
+        left: 0;
+        right: 0;
+        overflow:hidden;
+        -moz-transition: .8s all .3s;
+        -webkit-transition: .8s all .3s;
+        transition: .8s all .3s;
+    }
+    /* On affiche les li par menu */
+    #Menu_Deroulant li:hover ul{
+    max-height:15em;
+    }
+    /* background des liens menus */
+    #Menu_Deroulant li:first-child{
+    background-color: #65537A;
+    background-image:-webkit-linear-gradient(top, #65537A 0%, #2A2333 100%);
+    background-image:linear-gradient(to bottom, #65537A 0%, #2A2333 100%);
+    }
+    #Menu_Deroulant li:nth-child(2){
+    background-color: #729EBF;
+    background-image: -webkit-linear-gradient(top, #729EBF 0%, #333A40 100%);
+    background-image:linear-gradient(to bottom, #729EBF 0%, #333A40 100%);
+    }
+    #Menu_Deroulant li:nth-child(3){
+    background-color: #F6AD1A;
+    background-image:-webkit-linear-gradient(top, #F6AD1A 0%, #9F391A 100%);
+    background-image:linear-gradient(to bottom, #F6AD1A 0%, #9F391A 100%);
+    }
+    #Menu_Deroulant li:last-child{
+    background-color: #CFFF6A;
+    background-image:-webkit-linear-gradient(top, #CFFF6A 0%, #677F35 100%);
+    background-image:linear-gradient(to bottom, #CFFF6A 0%, #677F35 100%);
+    }
+    /* background des liens sous menus */
+    #Menu_Deroulant li:first-child li{
+    background:#2A2333;
+    }
+    #Menu_Deroulant li:nth-child(2) li{
+    background:#333A40;
+    }
+    #Menu_Deroulant li:nth-child(3) li{
+    background:#9F391A;
+    }
+    #Menu_Deroulant li:last-child li{
+    background:#677F35;
+    }
+    /* background des liens menus et sous menus au survol */
+    #Menu_Deroulant li:first-child:hover, #Menu_Deroulant li:first-child li:hover{
+    background:#65537A;
+    }
+    #Menu_Deroulant li:nth-child(2):hover, #Menu_Deroulant li:nth-child(2) li:hover{
+    background:#729EBF;
+    }
+    #Menu_Deroulant li:nth-child(3):hover, #Menu_Deroulant li:nth-child(3) li:hover{
+    background:#F6AD1A;
+    }
+    #Menu_Deroulant li:last-child:hover, #Menu_Deroulant li:last-child li:hover{
+    background:#CFFF6A;
+    }
+    /* les a href */
+    #Menu_Deroulant a{
+    text-decoration:none;
+    display:block;
+    padding:8px 32px;
+    color:#fff;
+    font-family:arial;
+    }
+    #Menu_Deroulant ul a{
+    padding:8px 0;
+    }
+    #Menu_Deroulant li:hover li a{
+    color:#fff;
+    text-transform:inherit;
+    }
+    #Menu_Deroulant li:hover a, #Menu_Deroulant li li:hover a{
+    color:#000;
+    }    
+
+
+
